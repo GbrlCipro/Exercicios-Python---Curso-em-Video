@@ -3,9 +3,10 @@
 somaNum = 0
 qtdNum = 0
 
+print('\nEsse programa vai retornar a soma de todos os números inteiros que você digitar. Para encerrar, digite o número 999.\n')
 
 while True:
-    n = int(input('Digite um número inteiro: '))
+    n = int(input('Digite um número: '))
 
     if n != 999:
         somaNum += n
@@ -13,5 +14,4 @@ while True:
     else:   
         break
 
-
-print(f"Foram digitados {qtdNum} números, e a soma deles é {somaNum} ")
+print(f"\nForam digitados {qtdNum} números, e a soma deles é {somaNum}\n")

@@ -4,7 +4,6 @@ somaNum = 0
 qtdNum = 0
 maiorValor = 0
 menorValor = 0
-mediaNum = somaNum / qtdNum
 
 
 while True:
@@ -18,4 +17,4 @@ while True:
 
 
 print(f"Foram digitados {qtdNum} números, e a soma deles é {somaNum} ")
-print('A media dos numeros digitados é ', mediaNum)
+#print('A media dos numeros digitados é ', )

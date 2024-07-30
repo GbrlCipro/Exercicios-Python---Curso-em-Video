@@ -3,8 +3,18 @@
 # Com While e com For
 
 
-n = int(input('Digite um número: '))
+num = int(input('Digite um número: '))
+cont = num
+f = 1
 
-while n > 0:
-    print(n)
-    n -= 1
+print(f'Calculando {num}! => ', end = '')
+while cont > 0:
+    print(f'{cont}', end = '')
+    print(' X ' if cont > 1 else ' = ', end = '')
+    f *= cont
+    cont -= 1
+print(f'{f}')
+
+
+
+# DEPOIS TENTAR FAZER COM WHILE
