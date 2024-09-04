@@ -10,7 +10,7 @@ idade_homem = 0
 hmaisvelho = ""
 lista_sexo = ['M', 'F']
 
-for c in range(1,3):
+for c in range(0,4):
     print('\n')
     print('=' * 30)
 
@@ -59,7 +59,7 @@ print('Quantidade de mulheres com mais de 21 anos -> ', mulher_maior21)
 if mulher_maior21 > 0:
     print('Quantidade de mulheres com mais de 21 anos -> ', mulher_maior21)
 else:
-    print('Não temos mulheres cadastradas')
+    print('Não temos mulheres maiores de 21 anos cadastradas')
 
 if hmaisvelho != '':
     print('O nome do homem mais velho é -> ', hmaisvelho,'e ele tem', idade_homem, ' anos')

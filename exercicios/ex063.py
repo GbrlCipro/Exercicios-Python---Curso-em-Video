@@ -1,8 +1,8 @@
 # Escreva um programa que leia um número inteiro n e mostre na telas os n primeiros elementos de uma sequência de fibonacci
 
 n = int(input('Quantos termos você quer mostrar? '))  # Solicita a quantidade de termos
-t1 = 0
-t2 = 1
+t1 = 0          # Primeiro termo é sempre 0
+t2 = 1          # Segundo termo é sempre 1
 print(f'{t1} > {t2}', end='')  # Exibe os dois primeiros termos
 cont = 3
 
