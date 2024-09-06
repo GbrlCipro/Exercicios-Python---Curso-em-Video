@@ -1,41 +1,78 @@
 # Faça um programa que jogue par ou ímpar com o computador. O jogo só será interrompido quando o jogador PERDER, mostrando o total de vitórias consecutivas que ele conquistou no final do jogo.
 
 import random
+import time
+from random import randint
 
-vencedor = ''
+numVit = 0
 
-palpJog = 'Par'
-numJog = 1
+while True:
+    numJog = int(input('Escolha seu número: '))
+    numMaq = random.randint(0, 10)
+    totNum = numJog + numMaq
 
-palpMaq = random.randint(0, 1)
-if palpMaq == 1:
-    palpMaq = 'Impar'
-else:
-    palpMaq = 'Par'
+    palpJog = str(input('Qual é o seu palpite? [P/I] ')).strip().upper()[0]
+    while palpJog not in 'PI':
+        palpJog = str(input('Qual é o seu palpite? [P/I] ')).strip().upper()[0]
 
-numMaq = random.randint(1, 5)
+    if palpJog == 'P':
+        palpMaq = 'I'
+    else:
+        palpMaq = 'P'
 
-resultNum = numJog + numMaq
+    if totNum % 2 == 0:
+        resultPalp = 'P'
+        par = 'Par'
+    else:
+        resultPalp = 'I'
+        impar = 'Ímpar'
 
-print('Escolha da maquina: ', numMaq)
-print('Escolha do jogador: ', numJog)
+    time.sleep(1)
+    print('=' * 30)
+    time.sleep(1)
+    print('Processando a partida...')
+    time.sleep(1)
 
-if resultNum % 2 == 0:
-    resultNum = 'É PAR'
-else:
-    resultNum = 'É ÍMPAR'
+    print(f'\nNúmero do jogador: {numJog}')
+    time.sleep(0.5)
+    if palpJog == 'P':
+        print('Palpite do jogador: Par')
+    else:
+        print('Palpite do jogador: Ímpar')
+    time.sleep(1)
 
-print('Resultado: ', resultNum)
+    print(f'\nNúmero da máquina: {numMaq}')
+    time.sleep(0.5)
+    if palpMaq == 'P':
+        print('Palpite da máquina: Par')
+    else:
+        print('Palpite da máquina: Ímpar')
+    time.sleep(1)
 
-if palpJog == 'Impar' and resultNum == 'É ÍMPAR':
-    vencedor = 'Jogador'
-    print('O vencedor foi ', vencedor)
-if palpJog == 'Par' and resultNum == 'É PAR':
-    vencedor = 'Jogador'
-    print('O vencedor foi ', vencedor)
-elif palpMaq == 'Impar' and resultNum == 'É ÍMPAR':
-    vencedor = 'Maquina'
-    print('O vencedor foi ', vencedor)
-elif palpMaq == 'Par' and resultNum == 'É PAR':
-    vencedor = 'Maquina'
-    print('O vencedor foi ', vencedor)
+    # Verificação do resultado
+    if resultPalp == 'P':
+        print(f'\nO total dos números foi {totNum} e o resultado é {par}')
+    else:
+        print(f'\nO total dos números foi {totNum} e o resultado é {impar}')
+    
+    # Definir o vencedor
+    if palpJog == resultPalp:
+        vencedor = 'JOGADOR'
+        numVit += 1
+    else:
+        vencedor = 'MÁQUINA'
+    
+    print(f'O vencedor foi {vencedor}\n')
+    
+    time.sleep(1)
+    print('=' * 30)
+    time.sleep(1)
+
+    # Verificar condição de fim de jogo
+    if vencedor == 'MÁQUINA':
+        if numVit > 1:
+            print(f'\nGAME OVER. Você venceu {numVit} vezes.')
+        else:
+            print(f'\nGAME OVER. Você venceu {numVit} vez.')
+        time.sleep(1)
+        break
