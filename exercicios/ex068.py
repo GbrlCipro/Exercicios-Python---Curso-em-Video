@@ -27,11 +27,18 @@ while True:
         resultPalp = 'I'
         impar = 'Ímpar'
 
+<<<<<<< Updated upstream
     time.sleep(1)
     print('=' * 30)
     time.sleep(1)
     print('Processando a partida...')
     time.sleep(1)
+=======
+print('Escolha da maquina: ', numMaq)
+print('Escolha do jogador: ', numJog)
+print('Palpite da maquina: ', palpMaq)
+print('Palpite do jogador: ', palpJog)
+>>>>>>> Stashed changes
 
     print(f'\nNúmero do jogador: {numJog}')
     time.sleep(0.5)
