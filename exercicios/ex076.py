@@ -1,0 +1,1 @@
+# Crie uma tupla única que tenha nomes dos produtos e seus respectivos preços na sequência. No final, mostre uma listagem de preços, organizando os dados de forma tabular
