@@ -1,9 +1,9 @@
 # Crie um programa que escreva "Olá, Mundo!" na tela.
 
-import tkinter as tk
+#msg = "\033[0;30;47mOlá, Mundo!\033[m"
+#print(msg)
 
-msg = "\033[0;30;47mOlá, Mundo!\033[m"
-print(msg)
+import tkinter as tk
 
 def imprimirtexto(event=None):
     texto = campotxt.get()    
