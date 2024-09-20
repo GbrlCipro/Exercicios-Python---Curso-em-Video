@@ -3,14 +3,10 @@
 # B) Em que posição foi digitado o primeiro valor 3;
 # C) Quais foram os números pares.
 
-import random as rd
-lista=[]
 n=0
-qtd9=0
-par=0
-pos3=0
+
 while n < 4:
-    num=int(input('Numero'))
+    num=int(input('Numero: '))
     lista.append(num)
     if num == 9:
         qtd9+=1
