@@ -7,7 +7,6 @@ def gravarPlvr():
     n = entr.get()
     nomes.append(n)
     entr.delete(0, 'end')
-
 def getVogais():
     result = ''
     for n in nomes:
@@ -17,10 +16,8 @@ def getVogais():
                 v.append(ltr)
         result += f'{n}: {" ".join(v)}\n{tp}\n'
     res.config(text=result)
-
 def test():
     res.config(text=nomes)
-
 def close():
     root.destroy()
 
@@ -40,6 +37,5 @@ btn2 = tk.Button(root, text='Fechar', command=close)
 btn2.pack()
 res = tk.Label(root, text='')
 res.pack()
-#root.bind('<Return>', gravarPlvr, close, test, getVogais)
 
 root.mainloop()
