@@ -6,35 +6,46 @@
 
 times = ('São Paulo', 'Botafogo', 'Palmeiras', 'Flamengo', 'Corinthias', 'Goiás', 'Vila Nova', 'Chapecoense', 'Independente RV', 'Bragantino', 'Santos', 'Vasco', 'America de Minas', 'Fluminese', 'Paysandu', 'Real Madrid', 'Barcelona', 'Milan', 'Arsenal', 'PSG')
 
-lista=list(times)
-lista.sort()
+print('-=' * 15)
+print(f'Lista de times: {times}')
+print('-=' * 15)
+print(f'Os 5 primeiros são {times[0:5]}')
+print('-=' * 15)
+print(f'Os 4 últimos são: {times[-4:]}')
+print('-=' * 15)
+print(f'Times em ordem alfabética: {sorted(times)}')
+print('-=' * 15)
+print(f'Posição do Chapecoense: {times.index("Chapecoense")+1}ª')
 
-top5 = times[:5]
-down4 = times[-4:]
-posChap = times.index('Chapecoense')+1
+# lista=list(times)
+# lista.sort()
 
-import tkinter as tk
+# top5 = times[:5]
+# down4 = times[-4:]
+# posChap = times.index('Chapecoense')+1
 
-root = tk.Tk()
+# import tkinter as tk
 
-timesFormatado = ', '.join(times)
-listaFormatada=', '.join(lista)
-top5Formatado=', '.join(top5)
-down4Formatado=', '.join(down4)
+# root = tk.Tk()
 
-rotulo1 = tk.Label(root, text=f'Times do campeonato Brasileiro 2024 (Ordem de colocação)\n{timesFormatado}')
-rotulo1.pack(pady=2)
+# timesFormatado = ', '.join(times)
+# listaFormatada=', '.join(lista)
+# top5Formatado=', '.join(top5)
+# down4Formatado=', '.join(down4)
 
-rotulo3 = tk.Label(root, text=f'Os 5 primeiros colocados do campeonato:\n{top5Formatado}')
-rotulo3.pack(pady=2)
+# rotulo1 = tk.Label(root, text=f'Times do campeonato Brasileiro 2024 (Ordem de colocação)\n{timesFormatado}')
+# rotulo1.pack(pady=2)
 
-rotulo5 = tk.Label(root, text=f'Os 4 últimos colocados do campeonato:\n{down4Formatado}')
-rotulo5.pack(pady=2)
+# rotulo3 = tk.Label(root, text=f'Os 5 primeiros colocados do campeonato:\n{top5Formatado}')
+# rotulo3.pack(pady=2)
 
-rotulo9 = tk.Label(root, text=f'Classificação do Chapecoense:\n{posChap}ª posição')
-rotulo9.pack(pady=2)
+# rotulo5 = tk.Label(root, text=f'Os 4 últimos colocados do campeonato:\n{down4Formatado}')
+# rotulo5.pack(pady=2)
 
-rotulo11= tk.Label(root, text=f'Times em ordem alfabética:\n{listaFormatada}')
-rotulo11.pack(pady=2)
+# rotulo9 = tk.Label(root, text=f'Classificação do Chapecoense:\n{posChap}ª posição')
+# rotulo9.pack(pady=2)
 
-root.mainloop()
+# rotulo11= tk.Label(root, text=f'Times em ordem alfabética:\n{listaFormatada}')
+# rotulo11.pack(pady=2)
+
+# root.mainloop()

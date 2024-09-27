@@ -1,38 +1,53 @@
 # Crie um programa que tenha uma tupla totalmente preenchida com uma contagem por extenso, de zero até 20. Seu programa deverá ler um número pelo teclado (entre 0 e 20) e mostrá-lo por extenso.
 
-tp = ('um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'catorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
+cont = ('zero', 'um', 'dois', 'tres', 'quatro',
+        'cinco', 'seis', 'sete', 'oito', 'nove',
+        'dez', 'onze', 'doze', 'treze', 'quatorze',
+        'quinze', 'dezesseis', 'dezessete', 'dezoito',
+        'dezenove', 'vinte')
+while True:
+    num = int(input('Digite um número entre 0 e 20: '))
+    if 0 <= num <= 20:
+        break
+    print('Tente novamente. ', end='')
+print(f'Voce digitou o número {cont[num]}')
 
-ent = int(input())
-indx = tp.index('tres')+1
+# alterar programa perguntando se quer continuar
 
-extn = ''
 
-for n in tp:
-    if ent == indx:
-        extn = tp[ent-1]
+# tp = ('um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'catorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
 
-print(extn, ent)
+# ent = int(input())
+# indx = tp.index('tres')+1
 
-# def close(): # função para fechar a janela do programa
-#     root.destroy()
+# extn = ''
 
-# import tkinter as tk
+# for n in tp:
+#     if ent == indx:
+#         extn = tp[ent-1]
 
-# root = tk.Tk()
+# print(extn, ent)
 
-# txt = tk.Label(root, text='')
-# txt.pack()
+# # def close(): # função para fechar a janela do programa
+# #     root.destroy()
 
-# entr = tk.Entry(root)
-# entr.pack()
+# # import tkinter as tk
 
-# btn = tk.Button(root, text='')
-# btn.pack()
+# # root = tk.Tk()
 
-# buttonClose = tk.Button(root, text='', command=close)
-# buttonClose.pack()
+# # txt = tk.Label(root, text='')
+# # txt.pack()
 
-# res = tk.Label(root, text='')
-# res.pack()
+# # entr = tk.Entry(root)
+# # entr.pack()
 
-# root.mainloop()
+# # btn = tk.Button(root, text='')
+# # btn.pack()
+
+# # buttonClose = tk.Button(root, text='', command=close)
+# # buttonClose.pack()
+
+# # res = tk.Label(root, text='')
+# # res.pack()
+
+# # root.mainloop()
